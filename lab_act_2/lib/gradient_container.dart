@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lab_act_2/styled_text.dart';
+import 'styled_text.dart';
 
 
 
@@ -19,7 +19,7 @@ class GradientContainer extends StatelessWidget {
           ],
         ),
       ),
-      child: Center(child: StyledText()
+      child: Center(child: StyledText('Queenly'),
         ),
     );
   }
