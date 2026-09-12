@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/change_color.dart';
+import 'package:quiz_app/start_screen.dart';
 
 void main() {
   runApp(
@@ -9,9 +9,7 @@ void main() {
           decoration: BoxDecoration(
             color: const Color.fromARGB(255, 230, 34, 100),
           ),
-          child: Center(
-            child: const ChangeColor(),
-          ),
+          child: const StartScreen(),
         ),
       ),
     )
