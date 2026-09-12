@@ -27,18 +27,18 @@ class StartScreen extends StatelessWidget{
 
           const SizedBox(height: 30),
           OutlinedButton.icon(
-            onPressed: () {
-              Text('Start Quiz');
-            },
-            style: OutlinedButton.styleFrom(
+            onPressed: startQuiz,
+
+              style: OutlinedButton.styleFrom(
               foregroundColor: Colors.white,
               side: const BorderSide(color: Color.fromARGB(255, 239, 101, 161)),
             ),
+
             icon: const Icon(Icons.arrow_right_alt),
             label: const Text('Start Quiz'),
           )
         ]
       )
-    );  
+    ); 
   }
 }
