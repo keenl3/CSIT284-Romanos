@@ -14,7 +14,7 @@ class StartScreen extends StatelessWidget{
           Image.asset(
             'asset/logo.png',
             width: 300,
-            color: const Color.fromARGB(255, 166, 0, 75),
+            color: const Color.fromARGB(255, 245, 143, 189),
           ),
 
           const SizedBox(height: 80),
