@@ -3,6 +3,7 @@ import 'package:quiz_app/answer_button.dart';
 import 'package:quiz_app/data/question.dart';
 
 
+
 class QuestionsScreen extends StatefulWidget {
   const QuestionsScreen({super.key, required this.onSelectAnswer,});
 
@@ -41,7 +42,7 @@ class _QuestionsScreenState extends State<QuestionsScreen>{
                 Text(
                   currentQuestion.text,
                   style: TextStyle(
-                    color: Color.fromARGB(255, 239, 163, 189),
+                    color: Color.fromARGB(255, 255, 254, 255),
                     fontFamily: 'CustomFont',
                     fontSize: 24,
                   ),

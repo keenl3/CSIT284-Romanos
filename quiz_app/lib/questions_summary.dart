@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class QuestionsSummary extends StatelessWidget {
   const QuestionsSummary(this.summaryData, {super.key});
@@ -32,6 +33,7 @@ class QuestionsSummary extends StatelessWidget {
                 child: Text(((data['question_index'] as int) + 1).toString(), 
                 style: const TextStyle(
                   color: Color.fromARGB(255, 255, 254, 254),
+                  fontFamily: 'CustomFont',
                   fontSize: 16,
                   ),
                   ),
@@ -44,7 +46,7 @@ class QuestionsSummary extends StatelessWidget {
                     children: [
                       Text(
                         data['question'] as String,
-                        style: const TextStyle(
+                        style: GoogleFonts.kumbhSans(
                           color: Color.fromARGB(255, 255, 255, 255),
                           fontSize: 16,
                           fontWeight: FontWeight.bold
@@ -53,16 +55,17 @@ class QuestionsSummary extends StatelessWidget {
                       const SizedBox(height: 5),
                       Text(
                         'Your answer: ${data['user_answer']}',
-                        style: const TextStyle(
+                        style: GoogleFonts.madimiOne(
                           color: Color.fromARGB(255, 246, 104, 244),
                           fontSize: 14,
                         ),
                       ),
                       Text(
                         'Correct answer: ${data['correct_answer']}',
-                        style: const TextStyle(
+                        style: GoogleFonts.newsCycle(
                           color: Color.fromARGB(255, 255, 255, 255),
                           fontSize: 14,
+                          fontWeight: FontWeight.bold
                         ),
                       ),
                       const SizedBox(height: 15),

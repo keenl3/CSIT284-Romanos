@@ -3,6 +3,7 @@ import 'package:quiz_app/data/question.dart';
 import 'package:quiz_app/questions_summary.dart';
 
 
+
 class ResultsScreen extends StatelessWidget {
   const ResultsScreen({super.key, required this.chosenAnswers, required this.onRestart});
 
@@ -44,8 +45,8 @@ class ResultsScreen extends StatelessWidget {
                 'You answered $numCorrectQuestions out of $numTotalQuestions questions correctly!',
                 style: const TextStyle(
                   color: Color.fromARGB(255, 243, 239, 240),
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold
+                  fontFamily: 'CustomFont',
+                  fontSize: 30,
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -70,10 +71,17 @@ class ResultsScreen extends StatelessWidget {
                   style: TextButton.styleFrom(
                     foregroundColor: Colors.white,
                     side: const BorderSide(color: Color.fromARGB(255, 249, 158, 196)),
+                    
                   ),
                   icon: const Icon(Icons.refresh),
-                  label: const Text('Restart Quiz'),
-                )
+                  label: const Text(
+                    'Restart Quiz',
+                    style: TextStyle(
+                      fontFamily: 'CustomFont',
+                      fontSize: 20,
+                      ),
+                    ),
+                ),
             ] 
           ),
         ),

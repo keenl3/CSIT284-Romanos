@@ -38,8 +38,14 @@ class StartScreen extends StatelessWidget{
             ),
 
             icon: const Icon(Icons.arrow_right_alt),
-            label: const Text('Start Quiz'),
-          )
+            label: const Text(
+              'Start Quiz',
+                style: TextStyle(
+                fontFamily: 'CustomFont',
+                fontSize: 20,
+              ),
+          ),
+          ),
         ]
       )
     ); 

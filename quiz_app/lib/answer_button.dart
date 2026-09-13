@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AnswerButton extends StatelessWidget {
   const AnswerButton({super.key, required this.answerText, required this.onTap});
@@ -21,6 +22,9 @@ class AnswerButton extends StatelessWidget {
       child: Text(
         answerText,
         textAlign: TextAlign.center,
+        style: GoogleFonts.kumbhSans(
+          fontSize: 16,
+        ),
       ),
     );
   }
