@@ -38,8 +38,8 @@ class _QuestionsScreenState extends State<QuestionsScreen>{
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                const Text(
-                  'Question 1',
+                Text(
+                  currentQuestion.text,
                   style: TextStyle(
                     color: Color.fromARGB(255, 239, 163, 189),
                     fontSize: 24,
