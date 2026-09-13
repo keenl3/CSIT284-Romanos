@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:quiz_app/data/question.dart';
 import 'package:quiz_app/start_screen.dart';
 import 'package:quiz_app/questions_screen.dart';
+import 'package:quiz_app/results_screen.dart';
 
 
 class Quiz extends StatefulWidget{
@@ -41,6 +42,12 @@ class _QuizState extends State<Quiz>{
     if(activeScreen == 'question-screen'){
       screenWidget = QuestionsScreen(
         onSelectAnswer: choiceAnswer,
+      );
+    }
+
+    if(activeScreen == 'result-screen'){
+      screenWidget = ResultsScreen(
+        chosenAnswers: selectedAnswers,
       );
     }
 
