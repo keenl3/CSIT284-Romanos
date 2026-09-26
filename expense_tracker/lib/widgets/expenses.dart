@@ -3,6 +3,7 @@ import 'package:expense_tracker/models/expense.dart';
 import 'package:expense_tracker/widgets/expenses_list.dart';
 import 'package:expense_tracker/widgets/new_expense.dart';
 import 'package:expense_tracker/widgets/expenses_summary.dart';
+import 'package:expense_tracker/widgets/category_selector_dialog.dart';
 
 class Expenses extends StatefulWidget {
   const Expenses({super.key});
@@ -29,9 +30,26 @@ class _ExpensesState extends State<Expenses> {
 
   void _openAddExpenseOverlay() {
     showModalBottomSheet(
+      context: context,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+      ),
+      builder: (ctx) => CategorySelectorDialog(
+        onSelectCategory: (chosenCategory) {
+          _openFormForCategory(chosenCategory);
+        },
+      ),
+    );
+  }
+
+  void _openFormForCategory(Category category) {
+    showModalBottomSheet(
       isScrollControlled: true,
       context: context,
-      builder: (ctx) => NewExpense(onAddExpense: _addExpense),
+      builder: (ctx) => NewExpense(
+        onAddExpense: _addExpense,
+        selectedCategory: category, 
+      ),
     );
   }
 
