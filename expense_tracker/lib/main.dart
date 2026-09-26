@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:expense_tracker/widgets/expenses.dart';
 
-// Your custom theme seed color palette
+
+// UI color pallete
 var kColorScheme = ColorScheme.fromSeed(
   seedColor: const Color.fromARGB(255, 252, 231, 234),
   brightness: Brightness.light,

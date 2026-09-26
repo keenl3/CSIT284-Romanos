@@ -18,7 +18,7 @@ class ExpenseItem extends StatelessWidget {
               expense.title,
               style: Theme.of(context).textTheme.titleLarge?.copyWith(
                     fontFamily: 'CustomFont',
-                    color: const Color.fromARGB(255, 255, 246, 249), // Dark Pink Text
+                    color: Color.fromARGB(255, 255, 220, 238), // Light color text for title
                   ),
             ),
             const SizedBox(height: 4),
@@ -27,7 +27,7 @@ class ExpenseItem extends StatelessWidget {
                 Text(
                   '₱${expense.amount.toStringAsFixed(2)}',
                   style: const TextStyle(
-                    color: Color.fromARGB(255, 255, 251, 253), // Dark Pink Amount
+                    color: Color.fromARGB(255, 255, 220, 238), // Light color text for title amount
                   ),
                 ),
                 const Spacer(),
@@ -35,13 +35,13 @@ class ExpenseItem extends StatelessWidget {
                   children: [
                     Icon(
                       categoryIcons[expense.category],
-                      color: const Color.fromARGB(255, 255, 243, 248), 
+                      color: Color.fromARGB(255, 255, 220, 238),  // Light color for icon
                     ),
                     const SizedBox(width: 8),
                     Text(
                       expense.formattedDate,
                       style: const TextStyle(
-                        color: Color.fromARGB(255, 255, 254, 255),
+                        color: Color.fromARGB(255, 255, 220, 238), // Light color text for date
                       ),
                     ),
                   ],
