@@ -16,7 +16,9 @@ class CategorySelectorDialog extends StatelessWidget {
           Text(
             'Select Expense Category',
             style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                  fontFamily: 'CustomFont',
                   fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 120, 20, 60),
                 ),
           ),
           const SizedBox(height: 20),

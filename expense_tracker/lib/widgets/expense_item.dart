@@ -16,18 +16,34 @@ class ExpenseItem extends StatelessWidget {
           children: [
             Text(
               expense.title,
-              style: Theme.of(context).textTheme.titleLarge,
+              style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                    fontFamily: 'CustomFont',
+                    color: const Color.fromARGB(255, 255, 246, 249), // Dark Pink Text
+                  ),
             ),
             const SizedBox(height: 4),
             Row(
               children: [
-                Text('\$${expense.amount.toStringAsFixed(2)}'),
+                Text(
+                  '₱${expense.amount.toStringAsFixed(2)}',
+                  style: const TextStyle(
+                    color: Color.fromARGB(255, 255, 251, 253), // Dark Pink Amount
+                  ),
+                ),
                 const Spacer(),
                 Row(
                   children: [
-                    Icon(categoryIcons[expense.category]),
+                    Icon(
+                      categoryIcons[expense.category],
+                      color: const Color.fromARGB(255, 255, 243, 248), 
+                    ),
                     const SizedBox(width: 8),
-                    Text(expense.formattedDate),
+                    Text(
+                      expense.formattedDate,
+                      style: const TextStyle(
+                        color: Color.fromARGB(255, 255, 254, 255),
+                      ),
+                    ),
                   ],
                 ),
               ],

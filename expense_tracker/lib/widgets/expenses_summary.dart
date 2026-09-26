@@ -24,7 +24,7 @@ class ExpensesSummary extends StatelessWidget {
       height: 110,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
-        color: Theme.of(context).colorScheme.primaryContainer.withOpacity(0.4),
+        color: Theme.of(context).colorScheme.primaryContainer,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -38,7 +38,7 @@ class ExpensesSummary extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.05),
+                    color: const Color.fromARGB(255, 255, 134, 219),
                     blurRadius: 4,
                     offset: const Offset(0, 2),
                   )
@@ -55,10 +55,10 @@ class ExpensesSummary extends StatelessWidget {
                   const SizedBox(height: 6),
                   FittedBox(
                     child: Text(
-                      '\$${bucket.totalExpenses.toStringAsFixed(2)}',
+                      '₱${bucket.totalExpenses.toStringAsFixed(2)}',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Theme.of(context).colorScheme.onSurface,
+                        color: Color.fromARGB(255, 120, 20, 60),
                       ),
                     ),
                   ),

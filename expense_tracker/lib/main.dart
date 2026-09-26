@@ -3,42 +3,37 @@ import 'package:expense_tracker/widgets/expenses.dart';
 
 // Your custom theme seed color palette
 var kColorScheme = ColorScheme.fromSeed(
-  seedColor: const Color.fromARGB(255, 239, 101, 161), // Custom pink theme
-);
-
-var kDarkColorScheme = ColorScheme.fromSeed(
-  brightness: Brightness.dark,
-  seedColor: const Color.fromARGB(255, 160, 12, 123),
+  seedColor: const Color.fromARGB(255, 252, 231, 234),
+  brightness: Brightness.light,
 );
 
 void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      darkTheme: ThemeData.dark().copyWith(
-        colorScheme: kDarkColorScheme,
-        cardTheme: const CardThemeData().copyWith(
-          color: kDarkColorScheme.secondaryContainer,
-          margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-        ),
-      ),
       theme: ThemeData().copyWith(
         colorScheme: kColorScheme,
+        scaffoldBackgroundColor: const Color.fromARGB(255, 255, 240, 245),
         appBarTheme: const AppBarTheme().copyWith(
-          backgroundColor: kColorScheme.onPrimaryContainer,
-          foregroundColor: kColorScheme.primaryContainer,
+          backgroundColor: const Color.fromARGB(255, 220, 20, 90), 
+          foregroundColor: Colors.white,
+
+        titleTextStyle: const TextStyle(
+        fontFamily: 'CustomFont', 
+        fontSize: 22,
+        fontWeight: FontWeight.bold,
+  ),
         ),
+      
         cardTheme: const CardThemeData().copyWith(
-          color: kColorScheme.secondaryContainer,
-          margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-        ),
-        elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(
-            backgroundColor: kColorScheme.primaryContainer,
-          ),
-        ),
+        color: const Color.fromARGB(255, 220, 20, 90), 
+        margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        
       ),
-      themeMode: ThemeMode.system,
+
+        
+      ),
+      themeMode: ThemeMode.light,
       home: const Expenses(),
     ),
   );
