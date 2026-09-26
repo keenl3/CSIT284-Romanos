@@ -18,7 +18,7 @@ class ExpenseItem extends StatelessWidget {
               expense.title,
               style: Theme.of(context).textTheme.titleLarge?.copyWith(
                     fontFamily: 'CustomFont',
-                    color: Color.fromARGB(255, 255, 220, 238), // Light color text for title
+                    color: const Color.fromARGB(255, 255, 220, 238), // Light color text for title
                   ),
             ),
             const SizedBox(height: 4),
@@ -35,7 +35,7 @@ class ExpenseItem extends StatelessWidget {
                   children: [
                     Icon(
                       categoryIcons[expense.category],
-                      color: Color.fromARGB(255, 255, 220, 238),  // Light color for icon
+                      color: const Color.fromARGB(255, 255, 220, 238),  // Light color for icon
                     ),
                     const SizedBox(width: 8),
                     Text(
