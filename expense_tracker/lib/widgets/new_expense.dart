@@ -86,6 +86,9 @@ class _NewExpenseState extends State<NewExpense> {
   Widget build(BuildContext context) {
     final keyboardSpace = MediaQuery.of(context).viewInsets.bottom;
 
+    return LayoutBuilder(
+      builder: (ctx, constraints) {
+      final width = constraints.maxWidth;
 
     return SizedBox(
       height: double.infinity,
@@ -95,42 +98,36 @@ class _NewExpenseState extends State<NewExpense> {
           child: SafeArea(
             child: Column(
               children: [
+                if(width >= 600)
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      child: TextField(
+                        controller: _titleController,
+                        maxLength: 50,
+                        decoration: const InputDecoration(label: Text('Title')),
+                      ),
+                    ),
+                    const SizedBox(width: 16),
+                    Expanded(
+                      child: TextField(
+                        controller: _amountController,
+                        keyboardType: TextInputType.number,
+                        decoration: const InputDecoration(
+                          prefixText: '₱ ',
+                          label: Text('Amount'),
+                        ),
+                      ),
+                    ),
+                  ],
+                )
+                else
                 TextField(
                   controller: _titleController,
                   maxLength: 50,
                   decoration: const InputDecoration(label: Text('Title')),
-          ),
-          Row(
-            children: [
-              Expanded(
-                child: TextField(
-                  controller: _amountController,
-                  keyboardType: TextInputType.number,
-                  decoration: const InputDecoration(
-                    prefixText: '₱ ',
-                    label: Text('Amount'),
-                  ),
-                ),
-              ),
-              const SizedBox(width: 16),
-              Expanded(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Text(
-                      _selectedDate == null
-                          ? 'No date selected'
-                          : formatter.format(_selectedDate!),
-                    ),
-                    IconButton(
-                      onPressed: _presentDatePicker,
-                      icon: const Icon(Icons.calendar_month),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
+            ),
           const SizedBox(height: 16),
           Row(
             children: [
@@ -168,5 +165,7 @@ class _NewExpenseState extends State<NewExpense> {
         ),
       ),
     );
+  },
+  );
   }
 }
