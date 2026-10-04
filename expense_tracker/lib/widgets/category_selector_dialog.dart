@@ -10,6 +10,7 @@ class CategorySelectorDialog extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(24.0),
+      child: SingleChildScrollView(
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -24,6 +25,7 @@ class CategorySelectorDialog extends StatelessWidget {
           const SizedBox(height: 20),
           GridView.count(
             shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
             crossAxisCount: 2,
             crossAxisSpacing: 12,
             mainAxisSpacing: 12,
@@ -64,6 +66,7 @@ class CategorySelectorDialog extends StatelessWidget {
             }).toList(),
           ),
         ],
+      ),
       ),
     );
   }
