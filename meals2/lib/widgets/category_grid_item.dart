@@ -9,7 +9,11 @@ class CategoryGridItem extends StatelessWidget{
   
   @override
   Widget build(BuildContext context){
-    return Container(
+    return InkWell(
+      onTap: onSelectCategory,
+      splashColor: Theme.of(context).primaryColor,
+      borderRadius: BorderRadius.circular(16),
+    child: Container(
       padding: EdgeInsets.all(12),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
@@ -28,6 +32,7 @@ class CategoryGridItem extends StatelessWidget{
           color: Theme.of(context).colorScheme.onSurface,
         ),
       ),
+    ),
     );
    }
   
