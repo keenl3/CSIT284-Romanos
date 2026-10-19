@@ -44,7 +44,7 @@ class _TabsScreenState extends State<TabsScreen> {
           bottom: const TabBar(
             indicatorColor: Color.fromARGB(255, 120, 20, 60),
             labelColor: Color.fromARGB(255, 120, 20, 60),
-            unselectedLabelColor: Colors.white70,
+            unselectedLabelColor: Color.fromARGB(179, 252, 188, 188),
             tabs: [
               Tab(icon: Icon(Icons.fastfood), text: 'Categories'),
               Tab(icon: Icon(Icons.star), text: 'Favorites'),

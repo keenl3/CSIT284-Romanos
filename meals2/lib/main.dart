@@ -14,7 +14,7 @@ final theme = ThemeData(
     foregroundColor: const Color.fromARGB(255, 120, 20, 60), 
   ),
   cardTheme: const CardThemeData().copyWith(
-    color: const Color.fromARGB(255, 255, 218, 233), 
+    color: const Color.fromARGB(255, 241, 174, 200), 
     margin: const EdgeInsets.all(8),
   ),
   fontFamily: 'CustomFont',
