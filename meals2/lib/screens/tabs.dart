@@ -51,7 +51,7 @@ class _TabsScreenState extends State<TabsScreen> {
             ],
           ),
         ),
-        body: const TabBarView(
+        body: TabBarView(
           children: [
             CategoriesScreen(onToggleFavorite: _toggleMealFavoriteStatus),
             MealsScreen(
