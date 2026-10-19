@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:meals2/screens/categories.dart';
+import 'package:meals2/screens/tabs.dart';
+
 
 final theme = ThemeData(
   useMaterial3: true,
@@ -9,7 +10,7 @@ final theme = ThemeData(
   ),
   scaffoldBackgroundColor: const Color.fromARGB(255, 255, 240, 245), 
   appBarTheme: const AppBarTheme().copyWith(
-    backgroundColor: const Color.fromARGB(255, 255, 182, 193),
+  
     foregroundColor: const Color.fromARGB(255, 120, 20, 60), 
   ),
   cardTheme: const CardThemeData().copyWith(
@@ -29,7 +30,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: theme,
-      home: CategoriesScreen()
+      home: const TabsScreen(),
     );
   }
 }
