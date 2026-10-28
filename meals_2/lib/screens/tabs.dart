@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 
 import 'package:meals_2/models/meal.dart';
+import 'package:meals_2/providers/favorites_provider.dart';
 import 'package:meals_2/providers/meals_provider.dart';
 import 'package:meals_2/screens/categories.dart';
 import 'package:meals_2/screens/filters.dart';
@@ -98,15 +99,13 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
     }).toList();
 
     Widget activePage = CategoriesScreen(
-      onToggleFavorite: _toggleMealFavoriteStatus,
       availableMeals: availableMeals,
     );
     var activePageTitle = 'Categories';
 
     if (_selectedPageIndex == 1) {
       activePage = MealsScreen(
-        meals: _favoriteMeals,
-        onToggleFavorite: _toggleMealFavoriteStatus,
+        meals: ref.watch(favoriteMealsProvider),
       );
       activePageTitle = 'Your Favorites';
     }
